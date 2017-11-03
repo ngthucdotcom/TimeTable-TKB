@@ -1,4 +1,4 @@
-# Time Table Project 
+# Time Table Project
 This is my project for time table ("thời khóa biểu" in Vietnamese)
 
 ## Technology
@@ -16,6 +16,5 @@ This is my project for time table ("thời khóa biểu" in Vietnamese)
 ## My contact
 * @ngthuc
 * https://ngthuc.com/
-* me@ngthuc.com
 
 # Thanks for follow!

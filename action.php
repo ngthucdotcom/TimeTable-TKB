@@ -9,5 +9,4 @@ foreach ($monhoc as $mon){
 	}
 }
 
-
 ?>
