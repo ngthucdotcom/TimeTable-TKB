@@ -114,50 +114,6 @@
         </div><!-- /.modal-dialog -->
       </div><!-- /.modal -->
 
-      <!-- Danh sach mon hoc -->
-      <div class="modal fade" id="list_subject">
-        <div class="modal-dialog modal-lg" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-                <span class="sr-only">Close</span>
-              </button>
-              <h4 class="modal-title">Danh sách môn học</h4>
-            </div>
-            <div class="modal-body">
-              <table class="table table-hover">
-                <thead>
-                    <tr>
-                        <th>Tên môn</th>
-                        <th>Mô tả</th>
-                        <th>Cập nhật</th>
-                    </tr>
-                </thead>
-                <tbody>
-                  <?php for ($i=0; $i < count($monhoc); $i++) {
-                    echo '<tr>
-                      <td>';
-                        echo $monhoc[$i]['TEN_MON']; echo "
-                      </td>
-                      <td>";echo $monhoc[$i]['DESC'];
-                      echo '</td><td>
-                        <button type="button" class="btn btn-success btn-sm" data-monhoc="'.$monhoc[$i]['TEN_MON'].'" data-phong="'.$monhoc[$i]['PHONG'].'" data-thu="'.$monhoc[$i]['THU'].'" data-tietbd="'.$monhoc[$i]['TIET_BD'].'" data-sotiet="'.$monhoc[$i]['SO_TIET'].'" data-nhom="'.$monhoc[$i]['NHOM'].'" data-mota="'.$monhoc[$i]['DESC'].'"  data-toggle="modal" data-target="#update_subject" ><span class="glyphicon glyphicon-pencil"></span></button>
-                        <a href="#" type="button" class="btn btn-danger btn-sm"><span class="glyphicon glyphicon-remove"></span></a>
-                      </td>
-                    </tr>';
-                  }
-                  ?>
-                  </tbody>
-                </table>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            </div>
-          </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-      </div><!-- /.modal -->
-
       <!-- Cap nhat mon hoc -->
       <div class="modal fade" id="update_subject">
         <div class="modal-dialog" role="document">
@@ -229,6 +185,51 @@
               </div>
             </div><!-- /.modal-content -->
           </form><!-- /.form update -->
+        </div><!-- /.modal-dialog -->
+      </div><!-- /.modal -->
+
+      <!-- Danh sach mon hoc -->
+      <div class="modal fade" id="list_subject">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                <span class="sr-only">Close</span>
+              </button>
+              <h4 class="modal-title">Danh sách môn học</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Tên môn</th>
+                        <th>Mô tả</th>
+                        <th>Cập nhật</th>
+                    </tr>
+                </thead>
+                <tbody>
+                  <?php for ($i=0; $i < count($monhoc); $i++) {
+                    echo '<tr>
+                      <td>'.
+                        $monhoc[$i]['TEN_MON']
+                    .'</td>
+                      <td>'.
+                        $monhoc[$i]['DESC']
+                      .'</td><td>
+                        <button type="button" class="btn btn-success btn-sm" data-monhoc="'.$monhoc[$i]['TEN_MON'].'" data-phong="'.$monhoc[$i]['PHONG'].'" data-thu="'.$monhoc[$i]['THU'].'" data-tietbd="'.$monhoc[$i]['TIET_BD'].'" data-sotiet="'.$monhoc[$i]['SO_TIET'].'" data-nhom="'.$monhoc[$i]['NHOM'].'" data-mota="'.$monhoc[$i]['DESC'].'"  data-toggle="modal" data-target="#update_subject" ><span class="glyphicon glyphicon-pencil"></span></button>
+                        <a href="#" type="button" class="btn btn-danger btn-sm"><span class="glyphicon glyphicon-remove"></span></a>
+                      </td>
+                    </tr>';
+                  }
+                  ?>
+                  </tbody>
+                </table>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div><!-- /.modal-content -->
         </div><!-- /.modal-dialog -->
       </div><!-- /.modal -->
 

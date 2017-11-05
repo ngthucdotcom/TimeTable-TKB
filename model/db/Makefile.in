@@ -1,8 +1,0 @@
-# $Id$
-
-LTLIBRARY_NAME        = libsqlite.la
-LTLIBRARY_SOURCES     = sqlite.c
-LTLIBRARY_SHARED_NAME = sqlite.la
-LTLIBRARY_SHARED_LIBADD  = $(SQLITE_SHARED_LIBADD)
-
-include $(top_srcdir)/build/dynlib.mk
