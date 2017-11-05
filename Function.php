@@ -1,5 +1,23 @@
 <?php
 
+// Ham dang nhap
+class Login {
+    public function __construct($uid = null, $pwd = null, $data) {
+      if ($uid == $data['account']['id'] || $uid == $data['account']['user']) {
+        if ($pwd == $data['account']['pwd']){
+          new Success('index.php','Dang nhap thanh cong voi tai khoan '.$uid.' co mat khau la '.$pwd);
+        } else new Warning('index.php','Đăng nhập thất bại');
+      } else new Warning('index.php','Đăng nhập thất bại');
+    }
+}
+
+// Ham dang xuat
+class Logout {
+    public function __construct($alert = null) {
+      new Success('index.php',$alert);
+    }
+}
+
 // Hàm điều hướng trang
 class Redirect {
     public function __construct($url = null) {

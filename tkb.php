@@ -8,7 +8,7 @@
 */
 
 //Bien $monhoc la mang chua cac dong trong bang du lieu tren
-include 'tkb_array.php';
+include 'data.php';
 
 $tkb = array(
     array(),

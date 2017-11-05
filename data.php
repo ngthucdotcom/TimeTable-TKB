@@ -1,6 +1,19 @@
 <?php
+//Khu vuc du lieu
+$data = array(
+    "account" => array(
+      "id" => 18008198,
+      "user" => "admin",
+      "pwd" => "khongcopass",
+      "email" => "demo@admin.tkb",
+      "name" => "Nguyên Thức",
+      "analytics" => "UA-84266655-1",
+      "desc" => "Mô tả của người dùng"
+    )
+);
+
 $monhoc = array(
-    "ComIS" => array(
+     0 => array(
       "TEN_MON" => "ComIS",
       "PHONG" => "101/C1",
       "THU" => 4,
@@ -9,7 +22,7 @@ $monhoc = array(
       "NHOM" => 02,
       "DESC" => "CT181 - Enterprise IS"
     ),
-    "PrjMng" => array(
+     1 => array(
       "TEN_MON" => "PrjMng",
       "PHONG" => "203/C1",
       "THU" => 3,
@@ -18,7 +31,7 @@ $monhoc = array(
       "NHOM" => 01,
       "DESC" => "CT223 - Software Project Management"
     ),
-	  "Struc" => array(
+	   2 => array(
       "TEN_MON" => "Struc",
       "PHONG" => "305/D1",
       "THU" => 5,
@@ -27,7 +40,7 @@ $monhoc = array(
       "NHOM" => 01,
       "DESC" => "CT242 -Software Structure"
     ),
-    "Test1" => array(
+     3 => array(
       "TEN_MON" => "Test1",
       "PHONG" => "111/C2",
       "THU" => 3,
@@ -36,7 +49,7 @@ $monhoc = array(
       "NHOM" => 01,
       "DESC" => "CT243 - Software Testing"
     ),
-    "Test2" => array(
+     4 => array(
       "TEN_MON" => "Test2",
       "PHONG" => "101/C1",
       "THU" => 5,
@@ -45,7 +58,7 @@ $monhoc = array(
       "NHOM" => 01,
       "DESC" => "CT243 - Software Testing"
     ),
-	   ".NET" => array(
+	   5 => array(
       "TEN_MON" => ".NET",
       "PHONG" => "206/KH",
       "THU" => 6,
@@ -54,7 +67,7 @@ $monhoc = array(
       "NHOM" => 03,
       "DESC" => "CT246 - .NET"
     ),
-	   "SHCVHT" => array(
+	   6 => array(
       "TEN_MON" => "SHCVHT",
       "PHONG" => "203/TS",
       "THU" => 4,
@@ -63,7 +76,7 @@ $monhoc = array(
       "NHOM" => 027,
       "DESC" => "Week 1 - 4 - 8 - 13"
     ),
-	   "NLCS" => array(
+	   7 => array(
       "TEN_MON" => "NLCS",
       "PHONG" => "N/A",
       "THU" => 2,

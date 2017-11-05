@@ -3,9 +3,21 @@
 // require_once 'init.php';
 require_once 'Function.php';
 
-// //Chèn header
+//Khai bao du lieu
+include 'data.php';
+
+//Chèn header
+include 'header.php';
+
+// admin bar
+include 'admin_bar.php';
+
+// default page
 include("main.php");
-//
+
+//Chèn footer
+include 'footer.php';
+
 // //Chèn menu
 // include("view/default/menu.php");
 

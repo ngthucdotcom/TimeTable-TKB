@@ -1,5 +1,5 @@
 <?php
-include 'tkb_array.php';
+include 'data.php';
 
 $tenmon = $_POST['tenmon'];
 
