@@ -3,7 +3,7 @@
             <h2>Schedule</h2>
             <hr />
         </center>'; ?>
-        <?php include('tkb.php'); ?>
+        <?php include('view/tkb.php'); ?>
     </div>
 
 	<!--mhModal-->

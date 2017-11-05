@@ -1,15 +1,13 @@
 <?php
 //Khu vuc du lieu
 $data = array(
-    "account" => array(
       "id" => 18008198,
       "user" => "admin",
       "pwd" => "1234",
-      "email" => "demo@admin.tkb",
+      "email" => "admin@tkb.tk",
       "name" => "Nguyên Thức",
       "analytics" => "UA-84266655-1",
       "desc" => "Mô tả của người dùng"
-    )
 );
 
 $monhoc = array(

@@ -1,23 +1,46 @@
 <?php
+require_once 'DB.php';
 
 // Ham dang nhap
 class Login {
-    public function __construct($uid = null, $pwd = null, $data, $session) {
-      if ($uid == $data['account']['id'] || $uid == $data['account']['user']) {
-        if ($pwd == $data['account']['pwd']){
+    public function __construct($uid = null, $pwd = null, $data, $session, $_DOMAINS) {
+      if ($uid == $data['id'] || $uid == $data['user'] || $uid == $data['email']) {
+        if ($pwd == $data['pwd']){
           // Luu session
           $session->send($uid);
-          new Success('index.php','Đăng nhập thành công!');
-        } else new Warning('index.php','Đăng nhập thất bại');
-      } else new Warning('index.php','Đăng nhập thất bại');
+          new Success($_DOMAINS,'Đăng nhập thành công!');
+        } else new Warning('','Đăng nhập thất bại');
+      } else new Warning('','Đăng nhập thất bại');
     }
 }
 
 // Ham dang xuat
 class Logout {
-    public function __construct($alert = null,$session) {
+    public function __construct($alert = null, $session, $_DOMAINS) {
       $session->destroy();
-      new Success('index.php',$alert);
+      new Success($_DOMAINS,$alert);
+    }
+}
+
+// Ham them mon hoc
+class addSubject {
+    public function __construct($mon = null, $phong = null, $thu = null, $tietbd = null, $sotiet = null, $nhom = null, $desc = null, $monhoc, $_DOMAINS) {
+      $num_rows = count($monhoc);
+      $new_subject_num = $num_rows + 1;
+      $monhocmoi = array($new_subject_num => array('MON_HOC' => $mon, 'PHONG' => $phong, 'THU' => $thu, 'TIET_BD' => $tietbd, 'SO_TIET' => $sotiet, 'NHOM' => $nhom, 'DESC' => $desc));
+          if(array_merge($monhoc,$monhocmoi)) {
+            new Success($_DOMAINS,'Thêm môn học mới thành công!');
+          } else new Warning($_DOMAINS,'Thêm môn học mới thất bại');
+    }
+}
+
+// Ham cap nhat thong tin
+class updateInfo {
+    public function __construct($id = null, $user = null, $pwd = null, $email = null, $name = null, $analytics = null, $desc = null, $data, $_DOMAINS) {
+      if ($id){
+        $data = array('id' => $id, 'user' => $user, 'pwd' => $pwd, 'email' => $email, 'name' => $name, 'analytics' => $analytics, 'desc' => $desc);
+        new Success($_DOMAINS,'Cập nhật thông tin thành công!');
+      } else new Warning($_DOMAINS,'Cập nhật thông tin thất bại');
     }
 }
 

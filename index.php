@@ -1,21 +1,24 @@
 <?php
 // Require default
-require_once 'init.php';
+require_once 'controller/init.php';
 
 //Chèn header
-include 'header.php';
+include 'public/header.php';
 
 //Xac dinh user
 if ($user)
 {
   // admin bar
-  include 'admin_bar.php';
+  include 'view/admin_bar.php';
 }
 
 // default page
-include("main.php");
+include 'view/main.php';
+
+// Insert modals
+include 'view/modals.php';
 
 //Chèn footer
-include 'footer.php';
+include 'public/footer.php';
 
 ?>

@@ -8,7 +8,7 @@
 */
 
 //Bien $monhoc la mang chua cac dong trong bang du lieu tren
-include 'data.php';
+include 'controller/DB.php';
 
 $tkb = array(
     array(),
@@ -33,7 +33,8 @@ foreach ($monhoc as $mon) {
 
 // var_dump($tkb);
 
-echo '<table id="tkb" class="table table-bordered">
+echo '
+<table id="tkb" class="table table-bordered">
   <thead>
     <tr>
       <th>Mon</th>
@@ -45,17 +46,20 @@ echo '<table id="tkb" class="table table-bordered">
     </tr>
   </thead>
   <tbody>';
-
 for ($tiet = 0; $tiet < 10; $tiet++) {
-    echo "<tr>";
+  echo "
+  <tr>";
     for ($thu = 0; $thu < 6; $thu++) {
-        echo "<td data-toggle='modal' data-target='#mhModal'>";
+        echo "
+        <td data-toggle='modal' data-target='#mhModal'>";
         echo isset($tkb[$thu][$tiet]) ? $tkb[$thu][$tiet] : "_____";
         echo "</td>";
     }
-    echo "</tr>";
+    echo "
+    </tr>
+    ";
 }
-
 echo '</tbody>
-</table>';
+</table>
+';
 ?>

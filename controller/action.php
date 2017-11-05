@@ -1,5 +1,5 @@
 <?php
-include 'data.php';
+include 'DB.php';
 
 $tenmon = $_POST['tenmon'];
 
