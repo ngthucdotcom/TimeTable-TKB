@@ -1,8 +1,8 @@
-    <div class="container container-fluid">
+    <div class="container container-fluid"><?php if (!$user) echo '
         <center>
             <h2>Schedule</h2>
             <hr />
-        </center>
+        </center>'; ?>
         <?php include('tkb.php'); ?>
     </div>
 

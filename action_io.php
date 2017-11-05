@@ -1,9 +1,6 @@
 <?php
-//Khu vuc sessions
-
-// Khai bao ham va du lieu
-require_once 'Function.php';
-include 'data.php';
+// Require default
+require_once 'init.php';
 
 //Chèn header
 include 'header.php';
@@ -16,10 +13,10 @@ if (isset($_GET["do"])) {
           // $uid = $_POST['uid'];
           // $pwd = $_POST['pwd'];
 
-          new Login($_POST['uid'],$_POST['pwd'],$data);
+          new Login($_POST['uid'],$_POST['pwd'],$data,$session);
       } else if ($_GET["do"] == "logout") {
         // Xu ly dang xuat
-          new Logout('Đăng xuất thành công');
+          new Logout('Đăng xuất thành công',$session);
       } else {
           new Danger('index.php','Truy cập bị cấm');
       }

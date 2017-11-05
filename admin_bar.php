@@ -1,5 +1,6 @@
 <?php
-//Khu vuc sessions
+// Require default
+require_once 'init.php';
 
 //Khu vuc code
 
@@ -13,19 +14,19 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#"></a>
+          <a class="navbar-brand" href="index.php">Schedule</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="admin-bar">
-          <ul class="nav navbar-nav">
-            <li><a href="#" data-toggle='modal' data-target='#list_subject'>Danh sách môn học</a></li>
-            <li><a href="#" data-toggle='modal' data-target='#add_subject'>Thêm môn học</a></li>
+        <div class='collapse navbar-collapse' id='admin-bar'>
+          <ul class='nav navbar-nav'>
+            <li><a href='#' data-toggle='modal' data-target='#list_subject'>Danh sách môn học</a></li>
+            <li><a href='#' data-toggle='modal' data-target='#add_subject'>Thêm môn học</a></li>
           </ul>
 
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="#" data-toggle='modal' data-target='#update_info'>Cập nhật thông tin</a></li>
-            <li><a href="action_io.php?do=logout">Đăng xuất</a></li>
+          <ul class='nav navbar-nav navbar-right'>
+            <li><a href='#' data-toggle='modal' data-target='#update_info'>Cập nhật thông tin</a></li>
+            <li><a href='action_io.php?do=logout'>Đăng xuất</a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->

@@ -2,10 +2,12 @@
 
 // Ham dang nhap
 class Login {
-    public function __construct($uid = null, $pwd = null, $data) {
+    public function __construct($uid = null, $pwd = null, $data, $session) {
       if ($uid == $data['account']['id'] || $uid == $data['account']['user']) {
         if ($pwd == $data['account']['pwd']){
-          new Success('index.php','Dang nhap thanh cong voi tai khoan '.$uid.' co mat khau la '.$pwd);
+          // Luu session
+          $session->send($uid);
+          new Success('index.php','Đăng nhập thành công!');
         } else new Warning('index.php','Đăng nhập thất bại');
       } else new Warning('index.php','Đăng nhập thất bại');
     }
@@ -13,7 +15,8 @@ class Login {
 
 // Ham dang xuat
 class Logout {
-    public function __construct($alert = null) {
+    public function __construct($alert = null,$session) {
+      $session->destroy();
       new Success('index.php',$alert);
     }
 }

@@ -1,6 +1,6 @@
     <footer>
       <center>
-        @2017 - <a href="#" data-toggle='modal' data-target='#info'><?php echo $data['account']['name']; ?></a> - <a href="action_io.php?do=logout">Đăng xuất</a>
+        @2017 - <a href="#" data-toggle='modal' data-target='#info'><?php echo $data['account']['name']; ?></a><?php if ($user) echo ' - <a href="action_io.php?do=logout">Đăng xuất</a>'; ?>
       </center>
 
       <div class="modal fade" id="info">
@@ -18,8 +18,8 @@
               <?php echo $data['account']['desc']; ?>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <a href="#" type="button" class="btn btn-primary" data-toggle='modal' data-target='#login'>Đăng nhập</a>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button><?php if (!$user) echo "
+              <a href='#' type='button' class='btn btn-primary' data-toggle='modal' data-target='#login'>Đăng nhập</a>"; ?>
             </div>
           </div><!-- /.modal-content -->
         </div><!-- /.modal-dialog -->
