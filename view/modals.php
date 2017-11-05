@@ -25,7 +25,7 @@
       <!-- Mau dang nhap -->
       <div class="modal fade" id="login">
         <div class="modal-dialog" role="document">
-          <form class="form-horizontal" action="<?php echo $_DOMAINS; ?>controller/action_io.php?do=login" method="post">
+          <form class="form-horizontal" action="<?php echo $_DOMAINS; ?>" method="post">
             <div class="modal-content">
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -233,21 +233,21 @@
         </div><!-- /.modal-dialog -->
       </div><!-- /.modal -->
 
-<script language="JavaScript">
-//editDevice
-$('#update_subject').on('show.bs.modal', function(e) {
-  var monhoc = $(e.relatedTarget).data('monhoc');
-  $("#toMonhoc").val(monhoc);
-  var phong = $(e.relatedTarget).data('phong');
-  $("#toPhong").val(phong);
-  var thu = $(e.relatedTarget).data('thu');
-  $("#toThu").val(thu);
-  var tietbd = $(e.relatedTarget).data('tietbd');
-  $("#toTietbd").val(tietbd);
-  var sotiet = $(e.relatedTarget).data('sotiet');
-  $("#toSotiet").val(sotiet);
-  var nhom = $(e.relatedTarget).data('nhom');
-  $("#toNhom").val(nhom);
-  var mota = $(e.relatedTarget).data('mota');
-  $("#toMota").val(mota);
-});</script>
+      <script language="JavaScript">
+      //editDevice
+      $('#update_subject').on('show.bs.modal', function(e) {
+        var monhoc = $(e.relatedTarget).data('monhoc');
+        $("#toMonhoc").val(monhoc);
+        var phong = $(e.relatedTarget).data('phong');
+        $("#toPhong").val(phong);
+        var thu = $(e.relatedTarget).data('thu');
+        $("#toThu").val(thu);
+        var tietbd = $(e.relatedTarget).data('tietbd');
+        $("#toTietbd").val(tietbd);
+        var sotiet = $(e.relatedTarget).data('sotiet');
+        $("#toSotiet").val(sotiet);
+        var nhom = $(e.relatedTarget).data('nhom');
+        $("#toNhom").val(nhom);
+        var mota = $(e.relatedTarget).data('mota');
+        $("#toMota").val(mota);
+      });</script>

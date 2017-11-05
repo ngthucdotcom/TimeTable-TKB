@@ -15,6 +15,9 @@ if ($user)
 // default page
 include 'view/main.php';
 
+//Insert action i/o
+include 'controller/action_io.php';
+
 // Insert modals
 include 'view/modals.php';
 

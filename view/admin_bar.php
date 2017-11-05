@@ -49,11 +49,13 @@ if (isset($_POST['updateInfo'])) {
             <li><a href='#' data-toggle='modal' data-target='#list_subject'>Danh sách môn học</a></li>
             <li><a href='#' data-toggle='modal' data-target='#add_subject'>Thêm môn học</a></li>
           </ul>
-
-          <ul class='nav navbar-nav navbar-right'>
-            <li><a href='#' data-toggle='modal' data-target='#update_info'>Cập nhật thông tin</a></li>
-            <li><a href='controller/action_io.php?do=logout'>Đăng xuất</a></li>
-          </ul>
+          <form action="<?php echo $_DOMAINS; ?>" method="post" id="formLogout">
+            <input type="hidden" name="logout">
+            <ul class='nav navbar-nav navbar-right'>
+              <li><a href='#' data-toggle='modal' data-target='#update_info'>Cập nhật thông tin</a></li>
+              <li><a href="#" onclick="document.getElementById('formLogout').submit()">Đăng xuất</a></li>
+            </ul>
+          </form>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
