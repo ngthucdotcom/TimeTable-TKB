@@ -1,6 +1,6 @@
 <?php
 $monhoc = array(
-    array(
+    "ComIS" => array(
       "TEN_MON" => "ComIS",
       "PHONG" => "101/C1",
       "THU" => 4,
@@ -9,7 +9,7 @@ $monhoc = array(
       "NHOM" => 02,
       "DESC" => "CT181 - Enterprise IS"
     ),
-    array(
+    "PrjMng" => array(
       "TEN_MON" => "PrjMng",
       "PHONG" => "203/C1",
       "THU" => 3,
@@ -18,7 +18,7 @@ $monhoc = array(
       "NHOM" => 01,
       "DESC" => "CT223 - Software Project Management"
     ),
-	array(
+	  "Struc" => array(
       "TEN_MON" => "Struc",
       "PHONG" => "305/D1",
       "THU" => 5,
@@ -27,7 +27,7 @@ $monhoc = array(
       "NHOM" => 01,
       "DESC" => "CT242 -Software Structure"
     ),
-  array(
+    "Test1" => array(
       "TEN_MON" => "Test1",
       "PHONG" => "111/C2",
       "THU" => 3,
@@ -36,7 +36,7 @@ $monhoc = array(
       "NHOM" => 01,
       "DESC" => "CT243 - Software Testing"
     ),
-  array(
+    "Test2" => array(
       "TEN_MON" => "Test2",
       "PHONG" => "101/C1",
       "THU" => 5,
@@ -45,7 +45,7 @@ $monhoc = array(
       "NHOM" => 01,
       "DESC" => "CT243 - Software Testing"
     ),
-	array(
+	   ".NET" => array(
       "TEN_MON" => ".NET",
       "PHONG" => "206/KH",
       "THU" => 6,
@@ -54,7 +54,7 @@ $monhoc = array(
       "NHOM" => 03,
       "DESC" => "CT246 - .NET"
     ),
-	array(
+	   "SHCVHT" => array(
       "TEN_MON" => "SHCVHT",
       "PHONG" => "203/TS",
       "THU" => 4,
@@ -63,7 +63,7 @@ $monhoc = array(
       "NHOM" => 027,
       "DESC" => "Week 1 - 4 - 8 - 13"
     ),
-	array(
+	   "NLCS" => array(
       "TEN_MON" => "NLCS",
       "PHONG" => "N/A",
       "THU" => 2,
@@ -73,5 +73,5 @@ $monhoc = array(
       "DESC" => "CT239 - Not Schedule"
     )
 );
-var_dump($monhoc);
+// var_dump($monhoc);
 ?>
