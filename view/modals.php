@@ -114,43 +114,6 @@
         </div><!-- /.modal-dialog -->
       </div><!-- /.modal -->
 
-      <!-- Cap nhat mon hoc -->
-      <div class="modal fade" id="update_subject">
-        <div class="modal-dialog" role="document">
-          <form class="form-horizontal" action="#" method="post">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                  <span class="sr-only">Close</span>
-                </button>
-                <h4 class="modal-title">Cập nhật môn học</h4>
-              </div>
-              <div class="modal-body">
-                <span class="label label-default">Tên môn</span>
-                  <input type="text" class="form-control" name="MON_HOC" id="toMonhoc" value="" placeholder="Tên môn học">
-                <span class="label label-default">Phòng</span>
-                  <input type="text" class="form-control" name="PHONG" id="toPhong" value="" placeholder="Phòng">
-                <span class="label label-default">Thứ</span>
-                  <input type="text" class="form-control" name="THU" id="toThu" value="" placeholder="Thứ">
-                <span class="label label-default">Tiết bắt đầu</span>
-                  <input type="text" class="form-control" name="TIET_BD" id="toTietbd" value="" placeholder="Tiết bắt đầu">
-                <span class="label label-default">Số tiết</span>
-                  <input type="text" class="form-control" name="SO_TIET" id="toSotiet" value=""  placeholder="Số tiết">
-                <span class="label label-default">Nhóm</span>
-                  <input type="text" class="form-control" name="NHOM" id="toNhom" value=""  placeholder="Nhóm">
-                <span class="label label-default">Mô tả</span>
-                  <input type="text" class="form-control" name="DESC" id="toMota" value="" placeholder="Mô tả">
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-primary" name="updateSubject">Save changes</button>
-              </div>
-            </div><!-- /.modal-content -->
-          </form><!-- /.form update -->
-        </div><!-- /.modal-dialog -->
-      </div><!-- /.modal -->
-
       <!-- Them mon hoc -->
       <div class="modal fade" id="add_subject">
         <div class="modal-dialog" role="document">
@@ -182,6 +145,44 @@
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 <button type="submit" class="btn btn-primary" name="addSubject">Save changes</button>
+              </div>
+            </div><!-- /.modal-content -->
+          </form><!-- /.form update -->
+        </div><!-- /.modal-dialog -->
+      </div><!-- /.modal -->
+
+
+      <!-- Cap nhat mon hoc -->
+      <div class="modal fade" id="update_subject">
+        <div class="modal-dialog" role="document">
+          <form class="form-horizontal" action="#" method="post">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                  <span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title">Cập nhật môn học</h4>
+              </div>
+              <div class="modal-body">
+                <span class="label label-default">Tên môn</span>
+                  <input type="text" class="form-control" name="MON_HOC" id="toMonhoc" value="" placeholder="Tên môn học">
+                <span class="label label-default">Phòng</span>
+                  <input type="text" class="form-control" name="PHONG" id="toPhong" value="" placeholder="Phòng">
+                <span class="label label-default">Thứ</span>
+                  <input type="text" class="form-control" name="THU" id="toThu" value="" placeholder="Thứ">
+                <span class="label label-default">Tiết bắt đầu</span>
+                  <input type="text" class="form-control" name="TIET_BD" id="toTietbd" value="" placeholder="Tiết bắt đầu">
+                <span class="label label-default">Số tiết</span>
+                  <input type="text" class="form-control" name="SO_TIET" id="toSotiet" value=""  placeholder="Số tiết">
+                <span class="label label-default">Nhóm</span>
+                  <input type="text" class="form-control" name="NHOM" id="toNhom" value=""  placeholder="Nhóm">
+                <span class="label label-default">Mô tả</span>
+                  <input type="text" class="form-control" name="DESC" id="toMota" value="" placeholder="Mô tả">
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary" name="updateSubject">Save changes</button>
               </div>
             </div><!-- /.modal-content -->
           </form><!-- /.form update -->
