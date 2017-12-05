@@ -18,11 +18,4 @@ class Base_Controller extends EX_Controller
         // Load nội dung footer
         $this->view->load('base/footer');
     }
-
-    // Hàm hủy này có nhiệm vụ show nội dung của view, lúc này các controller
-    // không cần gọi đến $this->view->show nữa
-    public function __destruct()
-    {
-        $this->view->show();
-    }
 }
