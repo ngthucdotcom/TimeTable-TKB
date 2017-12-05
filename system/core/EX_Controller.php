@@ -35,7 +35,7 @@ class EX_Controller
         // Loader cho config
         require_once PATH_SYSTEM . '/core/loader/EX_Config_Loader.php';
         $this->config   = new EX_Config_Loader();
-        $this->config->load('config');
+        $this->config->load('autoload');
 
         // Loader Library
         require_once PATH_SYSTEM . '/core/loader/EX_Library_Loader.php';

@@ -31,8 +31,6 @@ foreach ($monhoc as $mon) {
     }
 }
 
-// var_dump($tkb);
-
 echo '
 <table id="tkb" class="table table-bordered">
   <thead>
