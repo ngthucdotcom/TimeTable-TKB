@@ -532,7 +532,7 @@ var Carousel = function () {
   var DATA_API_KEY = '.data-api';
   var JQUERY_NO_CONFLICT = $.fn[NAME];
   var TRANSITION_DURATION = 600;
-  var ARROW_LEFT_KEYCODE = 37; // KeyboardEvent.which value for left arrow key
+  var ARROW_LEEX_KEYCODE = 37; // KeyboardEvent.which value for left arrow key
 
   var ARROW_RIGHT_KEYCODE = 39; // KeyboardEvent.which value for right arrow key
 
@@ -758,7 +758,7 @@ var Carousel = function () {
       }
 
       switch (event.which) {
-        case ARROW_LEFT_KEYCODE:
+        case ARROW_LEEX_KEYCODE:
           event.preventDefault();
           this.prev();
           break;

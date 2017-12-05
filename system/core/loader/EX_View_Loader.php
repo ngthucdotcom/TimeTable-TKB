@@ -1,11 +1,11 @@
 <?php
 /**
- * @package     FT_Framework
+ * @package     EX_Framework
  * @author      Freetuts Dev Team
- * @email       freetuts.net@gmail.com
+ * @email       ngthuc.com@gmail.com
  * @copyright   Copyright (c) 2015
  * @since       Version 1.0
- * @filesource  system/core/loader/FT_View_Loader.php
+ * @filesource  system/core/loader/EX_View_Loader.php
  */
 
 class EX_View_Loader

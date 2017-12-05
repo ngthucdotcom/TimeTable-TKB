@@ -5,7 +5,7 @@ class View extends EX_Controller
     public function index()
     {
         $data = array(
-           'title' => 'Chào mừng các bạn đến với freetuts.net'
+           'title' => 'Chào mừng các bạn đến với ngthuc.com'
         );
 
         // Load view

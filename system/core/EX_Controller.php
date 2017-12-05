@@ -1,12 +1,12 @@
 <?php if ( ! defined('PATH_SYSTEM')) die ('Bad requested!');
 
 /**
- * @package     FT_Framework
+ * @package     EX_Framework
  * @author      Freetuts Dev Team
- * @email       freetuts.net@gmail.com
+ * @email       ngthuc.com@gmail.com
  * @copyright   Copyright (c) 2015
  * @since       Version 1.0
- * @filesource  system/core/FT_Controller.php
+ * @filesource  system/core/EX_Controller.php
  */
 class EX_Controller
 {

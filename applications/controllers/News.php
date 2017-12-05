@@ -12,7 +12,7 @@ class News extends EX_Controller
         echo '<h3>Token: csrf_token_name (changed): ' . $this->config->item('csrf_token_name') . '</h3>';
 
         // Tạo cấu hình mới tên website_name
-        $this->config->set_item('website_name', 'freetuts.net');
+        $this->config->set_item('website_name', 'ngthuc.com');
         echo '<h3>key website_name: ' . $this->config->item('website_name') . '</h3>';
     }
 

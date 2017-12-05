@@ -8,6 +8,6 @@ class Helper extends EX_Controller
         $this->helper->load('string');
 
         // Gọi đến hàm string_to_int
-        echo string_to_int('freetuts.net');
+        echo string_to_int('ngthuc.com');
     }
 }
