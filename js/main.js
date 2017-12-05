@@ -11,7 +11,7 @@ $(function(){
 
 function load_ajax(monhoc){
     $.ajax({
-        url : "applications/controllers/action.php",
+        url : "controller/action.php",
         type : "post",
         dateType:"text",
         data : {

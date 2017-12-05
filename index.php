@@ -1,6 +1,7 @@
 <?php
 <<<<<<< HEAD
 // Require default
+<<<<<<< HEAD
 require_once 'applications/controllers/init.php';
 =======
 // // Require database & thông tin chung
@@ -10,16 +11,19 @@ require_once 'Function.php';
 //Khai bao du lieu
 include 'data.php';
 >>>>>>> parent of d5dad3e... Add sessions and fix some bugs
+=======
+require_once 'controller/init.php';
+>>>>>>> parent of 1e2235c... Fix bugs 201712060219
 
 //Chèn header
-include 'applications/views/base/header.php';
+include 'public/header.php';
 
 <<<<<<< HEAD
 //Xac dinh user
 if ($user)
 {
   // admin bar
-  include 'applications/views/admin_bar.php';
+  include 'view/admin_bar.php';
 }
 =======
 // admin bar
@@ -27,16 +31,16 @@ include 'admin_bar.php';
 >>>>>>> parent of d5dad3e... Add sessions and fix some bugs
 
 // default page
-include 'applications/views/main.php';
+include 'view/main.php';
 
 //Insert action i/o
-include 'applications/controllers/action_io.php';
+include 'controller/action_io.php';
 
 // Insert modals
-include 'applications/views/modals.php';
+include 'view/modals.php';
 
 //Chèn footer
-include 'applications/views/base/footer.php';
+include 'public/footer.php';
 
 // //Chèn menu
 // include("view/default/menu.php");

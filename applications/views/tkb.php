@@ -8,7 +8,7 @@
 */
 
 //Bien $monhoc la mang chua cac dong trong bang du lieu tren
-$monhoc = json_decode(file_get_contents('applications/models/db.json'), TRUE);
+include 'controller/DB.php';
 
 $tkb = array(
     array(),
