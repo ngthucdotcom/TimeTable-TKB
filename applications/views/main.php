@@ -1,9 +1,14 @@
-    <div class="container container-fluid"><?php if (!$user) echo '
+    <div class="container container-fluid">
         <center>
             <h2>Schedule</h2>
             <hr />
+<<<<<<< HEAD:applications/views/main.php
         </center>'; ?>
         <?php include('applications/views/tkb.php'); ?>
+=======
+        </center>
+        <?php include('tkb.php'); ?>
+>>>>>>> parent of d5dad3e... Add sessions and fix some bugs:main.php
     </div>
 
 	<!--mhModal-->

@@ -3,6 +3,7 @@ require_once 'DB.php';
 
 // Ham dang nhap
 class Login {
+<<<<<<< HEAD:applications/controllers/Function.php
     public function __construct($uid = null, $pwd = null, $data, $session, $_DOMAINS) {
       if ($uid == $data['id'] || $uid == $data['user'] || $uid == $data['email']) {
         if ($pwd == $data['pwd']){
@@ -11,11 +12,20 @@ class Login {
           new Success($_DOMAINS,'Đăng nhập thành công!');
         } else new Warning('','Đăng nhập thất bại');
       } else new Warning('','Đăng nhập thất bại');
+=======
+    public function __construct($uid = null, $pwd = null, $data) {
+      if ($uid == $data['account']['id'] || $uid == $data['account']['user']) {
+        if ($pwd == $data['account']['pwd']){
+          new Success('index.php','Dang nhap thanh cong voi tai khoan '.$uid.' co mat khau la '.$pwd);
+        } else new Warning('index.php','Đăng nhập thất bại');
+      } else new Warning('index.php','Đăng nhập thất bại');
+>>>>>>> parent of d5dad3e... Add sessions and fix some bugs:Function.php
     }
 }
 
 // Ham dang xuat
 class Logout {
+<<<<<<< HEAD:applications/controllers/Function.php
     public function __construct($alert = null, $session, $_DOMAINS) {
       $session->destroy();
       new Success($_DOMAINS,$alert);
@@ -41,6 +51,10 @@ class updateInfo {
         $data = array('id' => $id, 'user' => $user, 'pwd' => $pwd, 'email' => $email, 'name' => $name, 'analytics' => $analytics, 'desc' => $desc);
         new Success($_DOMAINS,'Cập nhật thông tin thành công!');
       } else new Warning($_DOMAINS,'Cập nhật thông tin thất bại');
+=======
+    public function __construct($alert = null) {
+      new Success('index.php',$alert);
+>>>>>>> parent of d5dad3e... Add sessions and fix some bugs:Function.php
     }
 }
 
