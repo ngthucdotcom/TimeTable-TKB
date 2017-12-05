@@ -10,5 +10,8 @@ class View extends EX_Controller
 
         // Load view
         $this->view->load('view', $data);
+
+        // Show view
+        $this->view->show();
     }
 }
