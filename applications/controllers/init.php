@@ -7,7 +7,7 @@ require_once 'DB.php';
 //Khai bao du lieu
 // include 'data.php';
 
-$_DOMAINS = 'http://127.0.0.1/tkb/';
+$_DOMAINS = 'http://localhost/tkb/';
 
 // Khởi tạo session
 $session = new Session();

@@ -1,27 +1,27 @@
 <?php
 // Require default
-require_once 'controller/init.php';
+require_once 'applications/controllers/init.php';
 
 //Chèn header
-include 'public/header.php';
+include 'applications/views/base/header.php';
 
 //Xac dinh user
 if ($user)
 {
   // admin bar
-  include 'view/admin_bar.php';
+  include 'applications/views/admin_bar.php';
 }
 
 // default page
-include 'view/main.php';
+include 'applications/views/main.php';
 
 //Insert action i/o
-include 'controller/action_io.php';
+include 'applications/controllers/action_io.php';
 
 // Insert modals
-include 'view/modals.php';
+include 'applications/views/modals.php';
 
 //Chèn footer
-include 'public/footer.php';
+include 'applications/views/base/footer.php';
 
 ?>
