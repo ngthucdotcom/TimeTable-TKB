@@ -18,6 +18,7 @@ class User extends EX_Controller
         'titlePage' => 'List All User',
         'contentPage' => 'Đây là nội dung'
       );
+      // Can't using master layout in MVC original 
 
       // $this->load->view('master/main', $this->_data);
       $this->view->load('master/main', $data);
