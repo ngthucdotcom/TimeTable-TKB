@@ -1,27 +1,14 @@
-<?php
-// Require default
-require_once 'controller/init.php';
+<?php // Boostrap MVC
 
-//Chèn header
-include 'public/header.php';
+// Đường dẫn tới hệ  thống
+define('PATH_SYSTEM', __DIR__ .'/system');
+define('PATH_APPLICATION', __DIR__ . '/applications');
 
-//Xac dinh user
-if ($user)
-{
-  // admin bar
-  include 'view/admin_bar.php';
-}
+// Lấy thông số cấu hình
+require (PATH_SYSTEM . '/config/config.php');
 
-// default page
-include 'view/main.php';
+//mở file FT_Common.php, file này chứa hàm FT_Load() chạy hệ thống
+include_once PATH_SYSTEM . '/core/EX_Common.php';
 
-//Insert action i/o
-include 'controller/action_io.php';
-
-// Insert modals
-include 'view/modals.php';
-
-//Chèn footer
-include 'public/footer.php';
-
-?>
+// Chương trình chính
+EX_load();
