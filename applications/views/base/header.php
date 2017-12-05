@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>View Schedule</title>
     <link rel="icon shortcut" href="https://ngthuc.com/favicon.ico">
-    <link rel="stylesheet" href="http://localhost/tkb/css/bootstrap.min.css">
-    <link rel="stylesheet" href="http://localhost/tkb/css/style.css">
-    <script src="http://localhost/tkb/js/jquery.min.js"></script>
-    <script src="http://localhost/tkb/js/bootstrap.min.js"></script>
-    <script src="http://localhost/tkb/js/main.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="public/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="public/main.js"></script>
     <script>
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
