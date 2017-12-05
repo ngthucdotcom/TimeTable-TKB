@@ -35,6 +35,11 @@ class EX_View_Loader
 
         // Gán nội dung vào danh sách view đã load
         $this->__content[] = $content;
+
+        // Hiển thị toàn bộ view đã load, được dùng ở controller
+        foreach ($this->__content as $html){
+            echo $html;
+        }
     }
 
     /**
@@ -42,10 +47,10 @@ class EX_View_Loader
      *
      * @desc    Hàm hiển thị toàn bộ view đã load, được dùng ở controller
      */
-    public function show()
-    {
-        foreach ($this->__content as $html){
-            echo $html;
-        }
-    }
+    // public function show()
+    // {
+    //     foreach ($this->__content as $html){
+    //         echo $html;
+    //     }
+    // }
 }
