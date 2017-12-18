@@ -1,5 +1,5 @@
 <?php
-require_once 'DB.php';
+require 'DB.php';
 
 $tenmon = $_POST['tenmon'];
 

@@ -1,8 +1,7 @@
 <?php
-// Insert data array
+/// Read Method
 $path = '/tkb';
-
-$dbuser = json_decode(file_get_contents('http://'.$_SERVER['HTTP_HOST'].$path.'/user.json'), TRUE);
-
-$dbtkb = json_decode(file_get_contents('http://'.$_SERVER['HTTP_HOST'].$path.'/tkbdb.json'), TRUE);
+$db = json_decode(file_get_contents('http://'.$_SERVER['HTTP_HOST'].$path.'/controller/user.json'), TRUE);
+$dbuser = $db['user'][0];
+$dbtkb = json_decode(file_get_contents('http://'.$_SERVER['HTTP_HOST'].$path.'/controller/tkbdb.json'), TRUE);
 ?>

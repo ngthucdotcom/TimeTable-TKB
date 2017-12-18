@@ -37,10 +37,10 @@ class addSubject {
 class updateInfo {
     public function __construct($id = null, $user = null, $pwd = null, $email = null, $name = null, $analytics = null, $slogan = null, $path, $_DOMAINS) {
       if ($id){
-        $all = json_decode(file_get_contents('http://'.$_SERVER['HTTP_HOST'].$path.'/user.json'), TRUE);
-        $jsonfile = $all;
+        $all = json_decode(file_get_contents('controller/user.json'), TRUE);
+        $jsonfile = $all['user'][0];
         // $jsonfile = $jsonfile[$id];
-
+        $post["id"] = isset($_POST["id"]) ? $_POST["id"] : "";
         $post["user"] = isset($_POST["user"]) ? $_POST["user"] : "";
         $post["pwd"] = isset($_POST["pwd"]) ? $_POST["pwd"] : "";
         $post["email"] = isset($_POST["email"]) ? $_POST["email"] : "";
@@ -50,9 +50,9 @@ class updateInfo {
 
         if ($jsonfile) {
             // unset($all[$id]);
-            $all[$id] = $post;
-            $all = array_values($all);
-            file_put_contents('http://'.$_SERVER['HTTP_HOST'].$path.'/user.json', json_encode($all));
+            $all['user'] = $post;
+            $all['user'] = array_values($all);
+            file_put_contents('controller/user.json', json_encode($all));
         }
         new Success($_DOMAINS,'Cập nhật thông tin thành công!');
       } else new Warning($_DOMAINS,'Cập nhật thông tin thất bại');
