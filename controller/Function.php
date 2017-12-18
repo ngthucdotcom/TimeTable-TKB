@@ -35,9 +35,25 @@ class addSubject {
 
 // Ham cap nhat thong tin
 class updateInfo {
-    public function __construct($id = null, $user = null, $pwd = null, $email = null, $name = null, $analytics = null, $desc = null, $data, $_DOMAINS) {
+    public function __construct($id = null, $user = null, $pwd = null, $email = null, $name = null, $analytics = null, $slogan = null, $path, $_DOMAINS) {
       if ($id){
-        $data = array('id' => $id, 'user' => $user, 'pwd' => $pwd, 'email' => $email, 'name' => $name, 'analytics' => $analytics, 'desc' => $desc);
+        $all = json_decode(file_get_contents('http://'.$_SERVER['HTTP_HOST'].$path.'/user.json'), TRUE);
+        $jsonfile = $all;
+        // $jsonfile = $jsonfile[$id];
+
+        $post["user"] = isset($_POST["user"]) ? $_POST["user"] : "";
+        $post["pwd"] = isset($_POST["pwd"]) ? $_POST["pwd"] : "";
+        $post["email"] = isset($_POST["email"]) ? $_POST["email"] : "";
+        $post["name"] = isset($_POST["name"]) ? $_POST["name"] : "";
+        $post["analytics"] = isset($_POST["analytics"]) ? $_POST["analytics"] : "";
+        $post["slogan"] = isset($_POST["slogan"]) ? $_POST["slogan"] : "";
+
+        if ($jsonfile) {
+            // unset($all[$id]);
+            $all[$id] = $post;
+            $all = array_values($all);
+            file_put_contents('http://'.$_SERVER['HTTP_HOST'].$path.'/user.json', json_encode($all));
+        }
         new Success($_DOMAINS,'Cập nhật thông tin thành công!');
       } else new Warning($_DOMAINS,'Cập nhật thông tin thất bại');
     }

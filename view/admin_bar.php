@@ -25,11 +25,11 @@ if (isset($_POST['updateInfo'])) {
   $email = $_POST['email'];
   $name = $_POST['name'];
   $analytics = $_POST['analytics'];
-  $desc = $_POST['desc'];
+  $slogan = $_POST['slogan'];
 
-  new updateInfo($id,$user,$pwd,$email,$name,$analytics,$desc,$data);
-  // echo $id.' - '.$user.' - '.$pwd.' - '.$email.' - '.$name.' - '.$analytics.' - '.$desc;
+  new updateInfo($id,$user,$pwd,$email,$name,$analytics,$slogan,$path,$_DOMAINS);
 }
+
 ?>
     <nav class="navbar navbar-default" role="navigation">
       <div class="container-fluid">
