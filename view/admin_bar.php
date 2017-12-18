@@ -6,14 +6,8 @@ require_once 'controller/init.php';
 // Them mon hoc
 if (isset($_POST['addSubject'])) {
   $TEN_MON = $_POST['TEN_MON'];
-  $PHONG = $_POST['PHONG'];
-  $THU = $_POST['THU'];
-  $TIET_BD = $_POST['TIET_BD'];
-  $SO_TIET = $_POST['SO_TIET'];
-  $NHOM = $_POST['NHOM'];
-  $DESC = $_POST['DESC'];
 
-  new addSubject($TEN_MON,$PHONG,$THU,$TIET_BD,$SO_TIET,$NHOM,$DESC,$_DOMAINS);
+  new addSubject($TEN_MON,$_DOMAINS);
 }
 
 // Cap nhat mon hoc

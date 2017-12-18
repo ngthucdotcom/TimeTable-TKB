@@ -23,13 +23,17 @@ class Logout {
 
 // Ham them mon hoc
 class addSubject {
-    public function __construct($mon = null, $phong = null, $thu = null, $tietbd = null, $sotiet = null, $nhom = null, $desc = null, $_DOMAINS) {
-      $num_rows = count($monhoc);
-      $new_subject_num = $num_rows + 1;
-      $monhocmoi = array($new_subject_num => array('MON_HOC' => $mon, 'PHONG' => $phong, 'THU' => $thu, 'TIET_BD' => $tietbd, 'SO_TIET' => $sotiet, 'NHOM' => $nhom, 'DESC' => $desc));
-          if(array_merge($monhoc,$monhocmoi)) {
-            new Success($_DOMAINS,'Thêm môn học mới thành công!');
-          } else new Warning($_DOMAINS,'Thêm môn học mới thất bại');
+    public function __construct($mon = null, $_DOMAINS) {
+      if ($mon){
+        $data = json_decode(file_get_contents('controller/tkbdb.json'), TRUE);
+
+        unset($_POST["addSubject"]);
+        $data["monhoc"] = array_values($data["monhoc"]);
+        array_push($data["monhoc"], $_POST);
+        file_put_contents('controller/tkbdb.json', json_encode($data));
+
+        new Success($_DOMAINS.'listsubject','Thêm môn học thành công!');
+      } else new Warning($_DOMAINS.'listsubject','Thêm môn học thất bại');
     }
 }
 

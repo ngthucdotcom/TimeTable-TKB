@@ -97,7 +97,7 @@
                 <span class="label label-default">Google Analytics</span>
                 <div class="input-group mb-2 mr-sm-2 mb-sm-0">
                   <div class="input-group-addon"><span class="glyphicon glyphicon-briefcase"></span></div>
-                  <input type="text" class="form-control" name="analytics" value="<?php // echo $dbuser['analytics']; ?>"  placeholder="Mã Google Analytics của bạn">
+                  <input type="text" class="form-control" name="analytics" value="<?php echo $dbuser['analytics']; ?>"  placeholder="Mã Google Analytics của bạn">
                 </div>
                 <span class="label label-default">Slogan</span>
                 <div class="input-group mb-2 mr-sm-2 mb-sm-0">
@@ -128,7 +128,7 @@
               </div>
               <div class="modal-body">
                 <span class="label label-default">Tên môn</span>
-                  <input type="text" class="form-control" name="MON_HOC" placeholder="Tên môn học">
+                  <input type="text" class="form-control" name="TEN_MON" placeholder="Tên môn học">
                 <span class="label label-default">Phòng</span>
                   <input type="text" class="form-control" name="PHONG" placeholder="Phòng">
                 <span class="label label-default">Thứ</span>

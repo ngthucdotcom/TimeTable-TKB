@@ -63,5 +63,21 @@
     "SO_TIET": "1",
     "NHOM": "233",
     "DESC": "Week 1 - 4 - 8 - 13"
+  }, {
+    "TEN_MON": "NLKTPM",
+    "PHONG": "N\/A",
+    "THU": "3",
+    "TIET_BD": "10",
+    "SO_TIET": "1",
+    "NHOM": "23",
+    "DESC": "CT250 - Not Schedule"
+  }, {
+    "TEN_MON": "Lu\u1eadn v\u0103n",
+    "PHONG": "N\/A",
+    "THU": "4",
+    "TIET_BD": "10",
+    "SO_TIET": "1",
+    "NHOM": "9",
+    "DESC": "CT594 - Not Schedule"
   }]
 }

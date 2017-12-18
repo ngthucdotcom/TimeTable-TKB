@@ -1,11 +1,11 @@
 {
   "user": [{
-    "id": "18008198",
+    "id": "1",
     "user": "admin",
     "pwd": "1234",
     "email": "admin@tkb.tk",
-    "name": "Nguy\u00ean Th\u1ee9c",
+    "name": "Người dùng",
     "analytics": "",
-    "slogan": "Slogan"
+    "slogan": "Slogan của người dùng"
   }]
 }
