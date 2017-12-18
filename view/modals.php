@@ -8,11 +8,11 @@
                 <span aria-hidden="true">&times;</span>
                 <span class="sr-only">Close</span>
               </button>
-              <h4 class="modal-title"><?php echo $data['name']; ?></h4>
+              <h4 class="modal-title"><?php echo $dbuser['name']; ?></h4>
             </div>
             <div class="modal-body">
               <!-- Mo ta boi nguoi dung -->
-              <?php echo $data['desc']; ?>
+              <?php echo $dbuser['slogan']; ?>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button><?php if (!$user) echo "
@@ -71,38 +71,38 @@
                 <span class="label label-default">ID</span>
                 <div class="input-group mb-2 mr-sm-2 mb-sm-0">
                   <div class="input-group-addon"><span class="glyphicon glyphicon-user"></span></div>
-                  <input type="hidden" class="form-control" name="id" value="<?php echo $data['id']; ?>">
-                  <input type="text" class="form-control" value="<?php echo $data['id']; ?>" disabled>
+                  <input type="hidden" class="form-control" name="id" value="<?php echo $dbuser['id']; ?>">
+                  <input type="text" class="form-control" value="<?php echo $dbuser['id']; ?>" disabled>
                 </div>
                 <span class="label label-default">Username</span>
                 <div class="input-group mb-2 mr-sm-2 mb-sm-0">
                   <div class="input-group-addon"><span class="glyphicon glyphicon-user"></span></div>
-                  <input type="text" class="form-control" name="user" value="<?php echo $data['user']; ?>" placeholder="Tài khoản của bạn">
+                  <input type="text" class="form-control" name="user" value="<?php echo $dbuser['user']; ?>" placeholder="Tài khoản của bạn">
                 </div>
                 <span class="label label-default">Password</span>
                 <div class="input-group mb-2 mr-sm-2 mb-sm-0">
                   <div class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></div>
-                  <input type="password" class="form-control" name="pwd" value="<?php echo $data['pwd']; ?>" placeholder="Mật khẩu của bạn">
+                  <input type="password" class="form-control" name="pwd" value="<?php echo $dbuser['pwd']; ?>" placeholder="Mật khẩu của bạn">
                 </div>
                 <span class="label label-default">Email</span>
                 <div class="input-group mb-2 mr-sm-2 mb-sm-0">
                   <div class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></div>
-                  <input type="text" class="form-control" name="email" value="<?php echo $data['email']; ?>" placeholder="Email của bạn">
+                  <input type="text" class="form-control" name="email" value="<?php echo $dbuser['email']; ?>" placeholder="Email của bạn">
                 </div>
                 <span class="label label-default">Name</span>
                 <div class="input-group mb-2 mr-sm-2 mb-sm-0">
                   <div class="input-group-addon"><span class="glyphicon glyphicon-info-sign"></span></div>
-                  <input type="text" class="form-control" name="name" value="<?php echo $data['name']; ?>"  placeholder="Tên của bạn">
+                  <input type="text" class="form-control" name="name" value="<?php echo $dbuser['name']; ?>"  placeholder="Tên của bạn">
                 </div>
                 <span class="label label-default">Google Analytics</span>
                 <div class="input-group mb-2 mr-sm-2 mb-sm-0">
                   <div class="input-group-addon"><span class="glyphicon glyphicon-briefcase"></span></div>
-                  <input type="text" class="form-control" name="analytics" value="<?php echo $data['analytics']; ?>"  placeholder="Mã Google Analytics của bạn">
+                  <input type="text" class="form-control" name="analytics" value="<?php // echo $dbuser['analytics']; ?>"  placeholder="Mã Google Analytics của bạn">
                 </div>
-                <span class="label label-default">Description</span>
+                <span class="label label-default">Slogan</span>
                 <div class="input-group mb-2 mr-sm-2 mb-sm-0">
                   <div class="input-group-addon"><span class="glyphicon glyphicon-paperclip"></span></div>
-                  <input type="text" class="form-control" name="desc" value="<?php echo $data['desc']; ?>" placeholder="Mô tả của bạn">
+                  <input type="text" class="form-control" name="desc" value="<?php echo $dbuser['slogan']; ?>" placeholder="Mô tả của bạn">
                 </div>
               </div>
               <div class="modal-footer">

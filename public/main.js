@@ -3,6 +3,7 @@ $(function(){
 		//alert($(this).html());
 		if ($(this).html()!="_____"){
 			load_ajax($(this).html());
+      // alert($(this).html());
 		}else {
 			$('#kqTKB').html("N/A");
 		}
@@ -18,7 +19,7 @@ function load_ajax(monhoc){
             tenmon : monhoc
         },
     success : function (result){
-			//alert(result);
+			// alert(result);
 			var kq = $.parseJSON(result);
 			var TEN_MON = kq.TEN_MON;
 			var PHONG = kq.PHONG;
@@ -29,7 +30,7 @@ function load_ajax(monhoc){
   });
 }
 
-//editDevice
+//edit
 $('#update_subject').on('show.bs.modal', function(e) {
   var monhoc = $(e.relatedTarget).data('monhoc');
   $("#toMonhoc").val(monhoc);

@@ -22,7 +22,7 @@ $tkb = array(
     array()
 );
 
-foreach ($monhoc as $mon) {
+foreach ($dbtkb as $mon) {
     $THU = $mon["THU"];
     $TIET_DAU = $mon["TIET_BD"];
     $TIET_CUOI = $mon["TIET_BD"] + $mon["SO_TIET"] - 1;

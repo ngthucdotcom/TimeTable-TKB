@@ -1,11 +1,10 @@
 <?php
-require_once 'DB.php';
 
 // Ham dang nhap
 class Login {
-    public function __construct($uid = null, $pwd = null, $data, $session, $_DOMAINS) {
-      if ($uid == $data['id'] || $uid == $data['user'] || $uid == $data['email']) {
-        if ($pwd == $data['pwd']){
+    public function __construct($uid = null, $pwd = null, $dbuser, $session, $_DOMAINS) {
+      if ($uid == $dbuser['id'] || $uid == $dbuser['user'] || $uid == $dbuser['email']) {
+        if ($pwd == $dbuser['pwd']){
           // Luu session
           $session->send($uid);
           new Success($_DOMAINS,'Đăng nhập thành công!');

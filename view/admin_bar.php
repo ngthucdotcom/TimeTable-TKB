@@ -46,6 +46,7 @@ if (isset($_POST['updateInfo'])) {
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class='collapse navbar-collapse' id='admin-bar'>
           <ul class='nav navbar-nav'>
+            <li><a href='<?php echo $_DOMAINS; ?>'>Trang chủ</a></li>
             <li><a href='<?php echo $_DOMAINS; ?>listsubject'>Danh sách môn học</a></li>
             <li><a href='#' data-toggle='modal' data-target='#add_subject'>Thêm môn học</a></li>
           </ul>

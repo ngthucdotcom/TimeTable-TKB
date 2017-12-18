@@ -1,16 +1,5 @@
 <?php
 // Insert data array
-include 'data.php';
-  //  class MyDB extends SQLite3 {
-  //     function __construct() {
-  //        $this->open('test.db');
-  //     }
-  //  }
-  //  $db = new MyDB();
-  //  if(!$db) {
-  //     echo $db->lastErrorMsg();
-  //  } else {
-  //     echo "Opened database successfully\n";
-  //  }
-
+$dbuser = json_decode(file_get_contents('user.json'), TRUE);
+$dbtkb = json_decode(file_get_contents('tkbdb.json'), TRUE);
 ?>

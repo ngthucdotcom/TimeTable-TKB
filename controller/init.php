@@ -5,8 +5,6 @@ require_once 'Function.php';
 require_once 'DB.php';
 
 //Khai bao du lieu
-// include 'data.php';
-
 $_DOMAINS = 'http://127.0.0.1/tkb/';
 
 // Khởi tạo session
@@ -29,7 +27,7 @@ else
 if ($user)
 {
     // Lấy dữ liệu tài khoản
-      $data_user = $data;
+      $data_user = $dbuser;
 }
 
 ?>
