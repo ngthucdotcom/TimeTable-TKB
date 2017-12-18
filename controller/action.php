@@ -1,6 +1,5 @@
 <?php
-$path = '/tkb';
-$dbtkb = json_decode(file_get_contents('http://'.$_SERVER['HTTP_HOST'].$path.'/tkbdb.json'), TRUE);
+require_once 'DB.php';
 
 $tenmon = $_POST['tenmon'];
 
