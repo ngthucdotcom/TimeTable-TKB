@@ -6,7 +6,7 @@
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
-                <span class="sr-only">Close</span>
+                <span class="sr-only">Đóng</span>
               </button>
               <h4 class="modal-title"><?php echo $dbuser['name']; ?></h4>
             </div>
@@ -15,7 +15,7 @@
               <?php echo $dbuser['slogan']; ?>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button><?php if (!$user) echo "
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button><?php if (!$user) echo "
               <a href='#' type='button' class='btn btn-primary' data-toggle='modal' data-target='#login'>Đăng nhập</a>"; ?>
             </div>
           </div><!-- /.modal-content -->
@@ -30,9 +30,9 @@
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
-                  <span class="sr-only">Close</span>
+                  <span class="sr-only">Đóng</span>
                 </button>
-                <h4 class="modal-title">Login</h4>
+                <h4 class="modal-title">Đăng nhập</h4>
               </div>
               <div class="modal-body">
                 <span class="label label-default">ID</span>
@@ -47,8 +47,8 @@
                 </div>
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-primary" name="adminLogin">Login</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                <button type="submit" class="btn btn-primary" name="adminLogin">Đăng nhập</button>
               </div>
             </div><!-- /.modal-content -->
           </form><!-- /.form login -->
@@ -63,7 +63,7 @@
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
-                  <span class="sr-only">Close</span>
+                  <span class="sr-only">Đóng</span>
                 </button>
                 <h4 class="modal-title">Cập nhật thông tin</h4>
               </div>
@@ -106,8 +106,8 @@
                 </div>
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-primary" name="updateInfo">Save changes</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                <button type="submit" class="btn btn-primary" name="updateInfo">Lưu thiết lập</button>
               </div>
             </div><!-- /.modal-content -->
           </form><!-- /.form update -->
@@ -122,9 +122,9 @@
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
-                  <span class="sr-only">Close</span>
+                  <span class="sr-only">Đóng</span>
                 </button>
-                <h4 class="modal-title">Cập nhật môn học</h4>
+                <h4 class="modal-title">Thêm môn học</h4>
               </div>
               <div class="modal-body">
                 <span class="label label-default">Tên môn</span>
@@ -143,8 +143,8 @@
                   <input type="text" class="form-control" name="DESC" placeholder="Mô tả">
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-primary" name="addSubject">Save changes</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                <button type="submit" class="btn btn-primary" name="addSubject">Lưu môn học</button>
               </div>
             </div><!-- /.modal-content -->
           </form><!-- /.form update -->
@@ -160,29 +160,40 @@
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
-                  <span class="sr-only">Close</span>
+                  <span class="sr-only">Đóng</span>
                 </button>
                 <h4 class="modal-title">Cập nhật môn học</h4>
               </div>
               <div class="modal-body">
-                <!-- <span class="label label-default">Tên môn</span>
-                  <input type="text" class="form-control" name="MON_HOC" id="toMonhoc" value="" placeholder="Tên môn học">
-                <span class="label label-default">Phòng</span>
-                  <input type="text" class="form-control" name="PHONG" id="toPhong" value="" placeholder="Phòng">
-                <span class="label label-default">Thứ</span>
-                  <input type="text" class="form-control" name="THU" id="toThu" value="" placeholder="Thứ">
-                <span class="label label-default">Tiết bắt đầu</span>
-                  <input type="text" class="form-control" name="TIET_BD" id="toTietbd" value="" placeholder="Tiết bắt đầu">
-                <span class="label label-default">Số tiết</span>
-                  <input type="text" class="form-control" name="SO_TIET" id="toSotiet" value=""  placeholder="Số tiết">
-                <span class="label label-default">Nhóm</span>
-                  <input type="text" class="form-control" name="NHOM" id="toNhom" value=""  placeholder="Nhóm">
-                <span class="label label-default">Mô tả</span>
-                  <input type="text" class="form-control" name="DESC" id="toMota" value="" placeholder="Mô tả"> -->
+                <!-- Chờ kết quả từ AJAX -->
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-primary" name="updateSubject">Save changes</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                <button type="submit" class="btn btn-primary" name="updateSubject">Lưu thay đổi</button>
+              </div>
+            </div><!-- /.modal-content -->
+          </form><!-- /.form update -->
+        </div><!-- /.modal-dialog -->
+      </div><!-- /.modal -->
+
+      <!-- Cap nhat mon hoc -->
+      <div class="modal fade" id="delete_subject">
+        <div class="modal-dialog" role="document">
+          <form class="form-horizontal" action="#" method="post">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                  <span class="sr-only">Đóng</span>
+                </button>
+                <h4 class="modal-title">Xóa môn học</h4>
+              </div>
+              <div class="modal-body">
+                <!-- Chờ kết quả từ AJAX -->
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                <button type="submit" class="btn btn-primary" name="deleteSubject">Đồng ý xóa</button>
               </div>
             </div><!-- /.modal-content -->
           </form><!-- /.form update -->

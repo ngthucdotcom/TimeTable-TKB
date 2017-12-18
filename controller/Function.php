@@ -35,12 +35,13 @@ class addSubject {
 
 // Ham cap nhat mon hoc
 class updateSubject {
-    public function __construct($mon = null, $phong = null, $thu = null, $tietbd = null, $sotiet = null, $nhom = null, $desc = null, $_DOMAINS) {
-      if ($mon){
+    public function __construct($stt = null, $mon = null, $phong = null, $thu = null, $tietbd = null, $sotiet = null, $nhom = null, $desc = null, $_DOMAINS) {
+      if ($stt){
         $all = json_decode(file_get_contents('controller/tkbdb.json'), TRUE);
-        $jsonfile = $all['monhoc'][$mon];
+        $jsonfile = $all["monhoc"];
+        $jsonfile = $jsonfile[$stt];
         // $jsonfile = $jsonfile[$id];
-        $post["MON_HOC"] = isset($_POST["MON_HOC"]) ? $_POST["MON_HOC"] : "";
+        $post["TEN_MON"] = isset($_POST["TEN_MON"]) ? $_POST["TEN_MON"] : "";
         $post["PHONG"] = isset($_POST["PHONG"]) ? $_POST["PHONG"] : "";
         $post["THU"] = isset($_POST["THU"]) ? $_POST["THU"] : "";
         $post["TIET_BD"] = isset($_POST["TIET_BD"]) ? $_POST["TIET_BD"] : "";
@@ -49,13 +50,34 @@ class updateSubject {
         $post["DESC"] = isset($_POST["DESC"]) ? $_POST["DESC"] : "";
 
         if ($jsonfile) {
+            unset($all["monhoc"][$stt]);
+            $all["monhoc"][$stt] = $post;
+            $all["monhoc"] = array_values($all["monhoc"]);
             // unset($all[$id]);
-            $all['monhoc'] = $post;
-            $all['monhoc'] = array_values($all);
+            // $all['monhoc'][$stt] = $post;
+            // $all['monhoc'] = array_values($all);
             file_put_contents('controller/tkbdb.json', json_encode($all));
         }
-        new Success($_DOMAINS.'listsubject','Cập nhật thông tin thành công!');
-      } else new Warning($_DOMAINS.'listsubject','Cập nhật thông tin thất bại');
+        new Success($_DOMAINS.'listsubject','Cập nhật môn học thành công!');
+      } else new Warning($_DOMAINS.'listsubject','Cập nhật môn học thất bại');
+    }
+}
+
+// Ham xoa mon hoc
+class deleteSubject {
+    public function __construct($stt = null, $_DOMAINS) {
+      if ($stt){
+        $all = json_decode(file_get_contents('controller/tkbdb.json'), TRUE);
+        $jsonfile = $all["monhoc"];
+        $jsonfile = $jsonfile[$stt];
+
+        if ($jsonfile) {
+            unset($all["monhoc"][$stt]);
+            $all["monhoc"] = array_values($all["monhoc"]);
+            file_put_contents('controller/tkbdb.json', json_encode($all));
+        }
+        new Success($_DOMAINS.'listsubject','Xóa môn học thành công!');
+      } else new Warning($_DOMAINS.'listsubject','Xóa môn học thất bại');
     }
 }
 

@@ -5,7 +5,7 @@ require_once 'controller/init.php';
 //Khu vuc code
 // Them mon hoc
 if (isset($_POST['addSubject'])) {
-  $MON_HOC = $_POST['MON_HOC'];
+  $TEN_MON = $_POST['TEN_MON'];
   $PHONG = $_POST['PHONG'];
   $THU = $_POST['THU'];
   $TIET_BD = $_POST['TIET_BD'];
@@ -13,13 +13,13 @@ if (isset($_POST['addSubject'])) {
   $NHOM = $_POST['NHOM'];
   $DESC = $_POST['DESC'];
 
-  new addSubject($MON_HOC,$PHONG,$THU,$TIET_BD,$SO_TIET,$NHOM,$DESC,$_DOMAINS);
+  new addSubject($TEN_MON,$PHONG,$THU,$TIET_BD,$SO_TIET,$NHOM,$DESC,$_DOMAINS);
 }
 
 // Cap nhat mon hoc
 if (isset($_POST['updateSubject'])) {
-  // $TEN_MON = $_POST['TEN_MON'];
-  $MON_HOC = $_POST['MON_HOC'];
+  $STT_MON = $_POST['STT_MON'];
+  $TEN_MON = $_POST['TEN_MON'];
   $PHONG = $_POST['PHONG'];
   $THU = $_POST['THU'];
   $TIET_BD = $_POST['TIET_BD'];
@@ -27,7 +27,14 @@ if (isset($_POST['updateSubject'])) {
   $NHOM = $_POST['NHOM'];
   $DESC = $_POST['DESC'];
 
-  new updateSubject($MON_HOC,$PHONG,$THU,$TIET_BD,$SO_TIET,$NHOM,$DESC,$_DOMAINS);
+  new updateSubject($STT_MON,$TEN_MON,$PHONG,$THU,$TIET_BD,$SO_TIET,$NHOM,$DESC,$_DOMAINS);
+}
+
+// Xóa mon hoc
+if (isset($_POST['deleteSubject'])) {
+  $STT_MON = $_POST['STT_MON'];
+
+  new deleteSubject($STT_MON,$_DOMAINS);
 }
 
 // Cap nhat thong tin

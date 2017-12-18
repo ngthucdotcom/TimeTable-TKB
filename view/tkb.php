@@ -23,12 +23,14 @@ $tkb = array(
 );
 
 foreach ($dbtkb as $mon) {
+  if ($mon["TEN_MON"] != "") {
     $THU = $mon["THU"];
     $TIET_DAU = $mon["TIET_BD"];
     $TIET_CUOI = $mon["TIET_BD"] + $mon["SO_TIET"] - 1;
     for ($i = $TIET_DAU; $i <= $TIET_CUOI; $i++) {
         $tkb[$THU-2][$i-1] = $mon["TEN_MON"];
     }
+  }
 }
 
 // var_dump($tkb);
