@@ -165,7 +165,7 @@
                 <h4 class="modal-title">Cập nhật môn học</h4>
               </div>
               <div class="modal-body">
-                <span class="label label-default">Tên môn</span>
+                <!-- <span class="label label-default">Tên môn</span>
                   <input type="text" class="form-control" name="MON_HOC" id="toMonhoc" value="" placeholder="Tên môn học">
                 <span class="label label-default">Phòng</span>
                   <input type="text" class="form-control" name="PHONG" id="toPhong" value="" placeholder="Phòng">
@@ -178,7 +178,7 @@
                 <span class="label label-default">Nhóm</span>
                   <input type="text" class="form-control" name="NHOM" id="toNhom" value=""  placeholder="Nhóm">
                 <span class="label label-default">Mô tả</span>
-                  <input type="text" class="form-control" name="DESC" id="toMota" value="" placeholder="Mô tả">
+                  <input type="text" class="form-control" name="DESC" id="toMota" value="" placeholder="Mô tả"> -->
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

@@ -1,3 +1,4 @@
+<?php // print_r($dbtkb);?>
     <footer>
       <center>
         @2017 - <a href="#" data-toggle='modal' data-target='#info'><?php echo $dbuser['name']; ?></a>

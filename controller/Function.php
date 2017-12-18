@@ -23,7 +23,7 @@ class Logout {
 
 // Ham them mon hoc
 class addSubject {
-    public function __construct($mon = null, $phong = null, $thu = null, $tietbd = null, $sotiet = null, $nhom = null, $desc = null, $monhoc, $_DOMAINS) {
+    public function __construct($mon = null, $phong = null, $thu = null, $tietbd = null, $sotiet = null, $nhom = null, $desc = null, $_DOMAINS) {
       $num_rows = count($monhoc);
       $new_subject_num = $num_rows + 1;
       $monhocmoi = array($new_subject_num => array('MON_HOC' => $mon, 'PHONG' => $phong, 'THU' => $thu, 'TIET_BD' => $tietbd, 'SO_TIET' => $sotiet, 'NHOM' => $nhom, 'DESC' => $desc));
@@ -33,9 +33,35 @@ class addSubject {
     }
 }
 
+// Ham cap nhat mon hoc
+class updateSubject {
+    public function __construct($mon = null, $phong = null, $thu = null, $tietbd = null, $sotiet = null, $nhom = null, $desc = null, $_DOMAINS) {
+      if ($mon){
+        $all = json_decode(file_get_contents('controller/tkbdb.json'), TRUE);
+        $jsonfile = $all['monhoc'][$mon];
+        // $jsonfile = $jsonfile[$id];
+        $post["MON_HOC"] = isset($_POST["MON_HOC"]) ? $_POST["MON_HOC"] : "";
+        $post["PHONG"] = isset($_POST["PHONG"]) ? $_POST["PHONG"] : "";
+        $post["THU"] = isset($_POST["THU"]) ? $_POST["THU"] : "";
+        $post["TIET_BD"] = isset($_POST["TIET_BD"]) ? $_POST["TIET_BD"] : "";
+        $post["SO_TIET"] = isset($_POST["SO_TIET"]) ? $_POST["SO_TIET"] : "";
+        $post["NHOM"] = isset($_POST["NHOM"]) ? $_POST["NHOM"] : "";
+        $post["DESC"] = isset($_POST["DESC"]) ? $_POST["DESC"] : "";
+
+        if ($jsonfile) {
+            // unset($all[$id]);
+            $all['monhoc'] = $post;
+            $all['monhoc'] = array_values($all);
+            file_put_contents('controller/tkbdb.json', json_encode($all));
+        }
+        new Success($_DOMAINS.'listsubject','Cập nhật thông tin thành công!');
+      } else new Warning($_DOMAINS.'listsubject','Cập nhật thông tin thất bại');
+    }
+}
+
 // Ham cap nhat thong tin
 class updateInfo {
-    public function __construct($id = null, $user = null, $pwd = null, $email = null, $name = null, $analytics = null, $slogan = null, $path, $_DOMAINS) {
+    public function __construct($id = null, $user = null, $pwd = null, $email = null, $name = null, $analytics = null, $slogan = null, $_DOMAINS) {
       if ($id){
         $all = json_decode(file_get_contents('controller/user.json'), TRUE);
         $jsonfile = $all['user'][0];

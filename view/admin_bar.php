@@ -13,8 +13,21 @@ if (isset($_POST['addSubject'])) {
   $NHOM = $_POST['NHOM'];
   $DESC = $_POST['DESC'];
 
-  new addSubject($MON_HOC,$PHONG,$THU,$TIET_BD,$SO_TIET,$NHOM,$DESC,$monhoc);
-  // echo $MON_HOC.' - '.$PHONG.' - '.$THU.' - '.$TIET_BD.' - '.$SO_TIET.' - '.$NHOM.' - '.$DESC;
+  new addSubject($MON_HOC,$PHONG,$THU,$TIET_BD,$SO_TIET,$NHOM,$DESC,$_DOMAINS);
+}
+
+// Cap nhat mon hoc
+if (isset($_POST['updateSubject'])) {
+  // $TEN_MON = $_POST['TEN_MON'];
+  $MON_HOC = $_POST['MON_HOC'];
+  $PHONG = $_POST['PHONG'];
+  $THU = $_POST['THU'];
+  $TIET_BD = $_POST['TIET_BD'];
+  $SO_TIET = $_POST['SO_TIET'];
+  $NHOM = $_POST['NHOM'];
+  $DESC = $_POST['DESC'];
+
+  new updateSubject($MON_HOC,$PHONG,$THU,$TIET_BD,$SO_TIET,$NHOM,$DESC,$_DOMAINS);
 }
 
 // Cap nhat thong tin
@@ -27,7 +40,7 @@ if (isset($_POST['updateInfo'])) {
   $analytics = $_POST['analytics'];
   $slogan = $_POST['slogan'];
 
-  new updateInfo($id,$user,$pwd,$email,$name,$analytics,$slogan,$path,$_DOMAINS);
+  new updateInfo($id,$user,$pwd,$email,$name,$analytics,$slogan,$_DOMAINS);
 }
 
 ?>
