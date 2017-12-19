@@ -1,4 +1,8 @@
 <?php
+if (file_exists('installer.php')) {
+  // unlink('installer.php');
+}
+
 // Require default
 require_once 'controller/init.php';
 
