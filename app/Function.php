@@ -25,12 +25,12 @@ class Logout {
 class addSubject {
     public function __construct($mon = null, $_DOMAINS) {
       if ($mon){
-        $data = json_decode(file_get_contents('controller/tkbdb.json'), TRUE);
+        $data = json_decode(file_get_contents('app/tkbdb.json'), TRUE);
 
         unset($_POST["addSubject"]);
         $data["monhoc"] = array_values($data["monhoc"]);
         array_push($data["monhoc"], $_POST);
-        file_put_contents('controller/tkbdb.json', json_encode($data));
+        file_put_contents('app/tkbdb.json', json_encode($data));
 
         new Success($_DOMAINS.'listsubject','Thêm môn học thành công!');
       } else new Warning($_DOMAINS.'listsubject','Thêm môn học thất bại');
@@ -41,7 +41,7 @@ class addSubject {
 class updateSubject {
     public function __construct($stt = null, $mon = null, $phong = null, $thu = null, $tietbd = null, $sotiet = null, $nhom = null, $desc = null, $_DOMAINS) {
       if ($stt){
-        $all = json_decode(file_get_contents('controller/tkbdb.json'), TRUE);
+        $all = json_decode(file_get_contents('app/tkbdb.json'), TRUE);
         $jsonfile = $all["monhoc"];
         $jsonfile = $jsonfile[$stt];
         // $jsonfile = $jsonfile[$id];
@@ -60,7 +60,7 @@ class updateSubject {
             // unset($all[$id]);
             // $all['monhoc'][$stt] = $post;
             // $all['monhoc'] = array_values($all);
-            file_put_contents('controller/tkbdb.json', json_encode($all));
+            file_put_contents('app/tkbdb.json', json_encode($all));
         }
         new Success($_DOMAINS.'listsubject','Cập nhật môn học thành công!');
       } else new Warning($_DOMAINS.'listsubject','Cập nhật môn học thất bại');
@@ -71,14 +71,14 @@ class updateSubject {
 class deleteSubject {
     public function __construct($stt = null, $_DOMAINS) {
       if ($stt){
-        $all = json_decode(file_get_contents('controller/tkbdb.json'), TRUE);
+        $all = json_decode(file_get_contents('app/tkbdb.json'), TRUE);
         $jsonfile = $all["monhoc"];
         $jsonfile = $jsonfile[$stt];
 
         if ($jsonfile) {
             unset($all["monhoc"][$stt]);
             $all["monhoc"] = array_values($all["monhoc"]);
-            file_put_contents('controller/tkbdb.json', json_encode($all));
+            file_put_contents('app/tkbdb.json', json_encode($all));
         }
         new Success($_DOMAINS.'listsubject','Xóa môn học thành công!');
       } else new Warning($_DOMAINS.'listsubject','Xóa môn học thất bại');
@@ -89,7 +89,7 @@ class deleteSubject {
 class updateInfo {
     public function __construct($id = null, $user = null, $pwd = null, $email = null, $name = null, $analytics = null, $slogan = null, $_DOMAINS) {
       if ($id){
-        $all = json_decode(file_get_contents('controller/user.json'), TRUE);
+        $all = json_decode(file_get_contents('app/user.json'), TRUE);
         $jsonfile = $all['user'][0];
         // $jsonfile = $jsonfile[$id];
         $post["id"] = isset($_POST["id"]) ? $_POST["id"] : "";
@@ -104,7 +104,7 @@ class updateInfo {
             // unset($all[$id]);
             $all['user'] = $post;
             $all['user'] = array_values($all);
-            file_put_contents('controller/user.json', json_encode($all));
+            file_put_contents('app/user.json', json_encode($all));
         }
         new Success($_DOMAINS,'Cập nhật thông tin thành công!');
       } else new Warning($_DOMAINS,'Cập nhật thông tin thất bại');

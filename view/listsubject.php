@@ -35,7 +35,7 @@ $('.edit_subject').on('click', function() {
 
 function load_ajax_update(mamonhoc,monhoc){
     $.ajax({
-        url : "controller/action_subject.php",
+        url : "app/action_subject.php",
         type : "post",
         dateType:"text",
         data : {
@@ -75,7 +75,7 @@ $('.delete_subject').on('click', function() {
 
 function load_ajax_delete(mamonhoc,monhoc){
     $.ajax({
-        url : "controller/action_subject.php",
+        url : "app/action_subject.php",
         type : "post",
         dateType:"text",
         data : {

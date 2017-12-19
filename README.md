@@ -19,7 +19,7 @@ This is my project for time table ("thời khóa biểu" in Vietnamese)
 
 ## Installing
 * Step 1: Download ZIP or Clone project to your computer. If download zip, don't forget extract it.
-* Step 2: Open folder controller. Open files init.php and DB.php. Edit $path to path of main folder in localhost or hosting
+* Step 2: Open folder app. Open files init.php and DB.php. Edit $path to path of main folder in localhost or hosting
 * Step 2.1: Delete folder Not use - delete recommend to clean source
 * Step 3: Open website and using it. Goodluck!
 

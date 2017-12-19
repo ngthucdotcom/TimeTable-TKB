@@ -1,6 +1,6 @@
 <?php
 // Require default
-require_once 'controller/init.php';
+require_once 'app/init.php';
 
 //Khu vuc code
 // Them mon hoc

@@ -1,6 +1,6 @@
 <?php
 // Require default
-require_once 'controller/init.php';
+require_once 'app/init.php';
 
 //Chèn header
 include 'public/header.php';
@@ -12,8 +12,8 @@ if ($user)
   include 'view/admin_bar.php';
 
   // list subject
-  if (isset($_GET['controller'])) {
-    if ($_GET['controller'] == 'listsubject') {
+  if (isset($_GET['app'])) {
+    if ($_GET['app'] == 'listsubject') {
       if ($user)
       {
         include 'view/listsubject.php';
@@ -29,7 +29,7 @@ if ($user)
 }
 
 //Insert action i/o
-include 'controller/action_io.php';
+include 'app/action_io.php';
 
 // Insert modals
 include 'view/modals.php';

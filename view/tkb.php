@@ -8,7 +8,7 @@
 */
 
 //Bien $monhoc la mang chua cac dong trong bang du lieu tren
-require 'controller/DB.php';
+require 'app/DB.php';
 
 $tkb = array(
     array(),
