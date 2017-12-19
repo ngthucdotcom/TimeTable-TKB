@@ -67,6 +67,7 @@ if (isset($_POST['updateInfo'])) {
           <form action="<?php echo $_DOMAINS; ?>" method="post" id="formLogout">
             <input type="hidden" name="logout">
             <ul class='nav navbar-nav navbar-right'>
+              <li><a>Xin chào, <b style="color:blue;"><?php echo $dbuser['name']; ?></b></a></li>
               <li><a href='#' data-toggle='modal' data-target='#update_info'>Cập nhật thông tin</a></li>
               <li><a href="#" onclick="document.getElementById('formLogout').submit()">Đăng xuất</a></li>
             </ul>

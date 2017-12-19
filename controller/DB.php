@@ -1,8 +1,8 @@
 <?php
+include 'routes.php';
 /// Read Method
-$path = '/tkb';
-$db = json_decode(file_get_contents('http://'.$_SERVER['HTTP_HOST'].$path.'/controller/user.json'), TRUE);
+$db = json_decode(file_get_contents($base_url.'controller/user.json'), TRUE);
 $dbuser = $db['user'][0];
-$tkb = json_decode(file_get_contents('http://'.$_SERVER['HTTP_HOST'].$path.'/controller/tkbdb.json'), TRUE);
+$tkb = json_decode(file_get_contents($base_url.'controller/tkbdb.json'), TRUE);
 $dbtkb = $tkb['monhoc'];
 ?>

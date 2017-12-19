@@ -2,6 +2,7 @@
       <!-- Thong tin nguoi dung -->
       <div class="modal fade" id="info">
         <div class="modal-dialog" role="document">
+          <form action="<?php echo $_DOMAINS; ?>" method="post" id="formLogout">
           <div class="modal-content">
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -13,12 +14,18 @@
             <div class="modal-body">
               <!-- Mo ta boi nguoi dung -->
               <?php echo $dbuser['slogan']; ?>
+              <input type="hidden" name="logout">
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button><?php if (!$user) echo "
-              <a href='#' type='button' class='btn btn-primary' data-toggle='modal' data-target='#login'>Đăng nhập</a>"; ?>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+              <?php if (!$user) {
+                echo "<a href='#' type='button' class='btn btn-primary' data-toggle='modal' data-target='#login'>Đăng nhập</a>";
+              } else {
+                echo '<a href="#" type="button" class="btn btn-primary" onclick="'."document.getElementById('formLogout')".'.submit()">Đăng xuất</a>';
+              } ?>
             </div>
           </div><!-- /.modal-content -->
+          </form>
         </div><!-- /.modal-dialog -->
       </div><!-- /.modal -->
 
