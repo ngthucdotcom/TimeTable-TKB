@@ -14,7 +14,10 @@ if ($user)
   // list subject
   if (isset($_GET['controller'])) {
     if ($_GET['controller'] == 'listsubject') {
-      include 'view/listsubject.php';
+      if ($user)
+      {
+        include 'view/listsubject.php';
+      }
     }
   } else {
     // default page
