@@ -1,5 +1,7 @@
 <?php
 // Require các thư viện PHP
+use app\Session;
+
 require_once 'Session.php';
 require_once 'Function.php';
 require_once 'DB.php';

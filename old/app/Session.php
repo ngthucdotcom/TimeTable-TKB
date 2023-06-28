@@ -1,7 +1,10 @@
 <?php
 
 // Lớp session
-class Session {
+namespace app;
+
+class Session
+{
     // Hàm bắt đầu session
     public function start()
     {
@@ -17,12 +20,9 @@ class Session {
     // Hàm lấy dữ liệu session
     public function get()
     {
-        if (isset($_SESSION['user']))
-        {
+        if (isset($_SESSION['user'])) {
             $user = $_SESSION['user'];
-        }
-        else
-        {
+        } else {
             $user = '';
         }
         return $user;

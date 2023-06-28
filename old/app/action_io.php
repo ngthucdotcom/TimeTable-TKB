@@ -1,6 +1,8 @@
 <?php
 
 // Khu vuc xu ly
+use app\Logout;
+
 if (isset($_POST["adminLogin"])) {
     new Login($_POST['uid'],$_POST['pwd'],$dbuser,$session,$_DOMAINS);
 } else if (isset($_POST["logout"])) {
